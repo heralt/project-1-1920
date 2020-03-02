@@ -5,6 +5,7 @@ import {getData} from "./modules/api.js";
 const main = document.querySelector('main');
 
 getData().then( json => {
+    console.dir(json);
     render(json);
 });
 
