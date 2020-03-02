@@ -24,10 +24,10 @@ fetch(url, config)
   });
 
 // render data
-function render(data) {
+/*function render(data) {
   const results = data.results;
   console.dir(results);
-  results.forEach((item, i) => {
+  results.forEach((item) => {
     const html = `
             <article>
               <h2>${item.titles[0]}</h2>
@@ -39,4 +39,4 @@ function render(data) {
           `;
     main.insertAdjacentHTML('beforeend', html);
   });
-}
+}*/
