@@ -1,14 +1,38 @@
 "use strict";
 
-/*import {helper} from "./modules/helper.js";*/
-import {search} from "./modules/api.js";
+import {getData} from "./modules/api.js";
 
 const main = document.querySelector('main');
 
-// search().then( json => {
-//     console.log(json);
-//     render(json);
-// });
+document.getElementById('search').addEventListener("click",fetchParameter);
+
+export function fetchParameter() {
+    let searchValue = document.getElementById('search-value').value;
+
+    getData(search(searchValue)).then( json => {
+        console.log(json);
+        render(json);
+    });
+}
+
+export function search(parameter) {
+    console.log(parameter);
+    const cors = 'https://cors-anywhere.herokuapp.com/';
+    const baseUrl = 'https://zoeken.oba.nl/api/v1';
+    const endPoint = '/search/?q=';
+    const key = '1e19898c87464e239192c8bfe422f280';
+    const detail = 'Default';
+    let query = '';
+
+    if(parameter){
+        query = parameter;
+    } else {
+        query = 'tolkien';
+    }
+
+    const url = `${cors}${baseUrl}${endPoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
+    return url;
+}
 
 /*helper.getCategoryChoice();*/
 
