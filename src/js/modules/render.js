@@ -1,8 +1,8 @@
 
 const main = document.querySelector('main');
 
-function clearScreen(id){
-  document.getElementById(id).innerHTML = "";
+export function clearScreen(id){
+  document.querySelector(id).textContent="";
 }
 
 export function render(data) {
@@ -19,7 +19,6 @@ export function render(data) {
               <p>${item.genres}</p>
             </article>
           `;
-    //clearScreen('main');
     main.insertAdjacentHTML('beforeend', html);
   });
 }

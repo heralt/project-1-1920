@@ -1,4 +1,3 @@
-
 export function search(parameter) {
     console.log(parameter);
     const cors = 'https://cors-anywhere.herokuapp.com/';
@@ -6,15 +5,17 @@ export function search(parameter) {
     const endPoint = '/search/?q=';
     const key = '03b058d877ec4276bb63dd1c6e1f3768';
     const detail = 'Default';
+    const pageSize = '&pagesize=10';
     let query = '';
 
     if(parameter){
         query = parameter;
     } else {
-        query = 'tolkien';
+        query = 'america';
     }
 
-    const url = `${cors}${baseUrl}${endPoint}${query}&pagesize=5&authorization=${key}&detaillevel=${detail}&output=json`;
+    /*&refine=true&facet=genre(tennis)*/
+    const url = `${cors}${baseUrl}${endPoint}${query}${pageSize}&authorization=${key}&detaillevel=${detail}&output=json`;
     return url;
 }
 

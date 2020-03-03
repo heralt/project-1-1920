@@ -66,12 +66,12 @@ h1 {
   font-size: 1.5em;
 }
 
-ul.themas {
+ul {
   display: flex;
   justify-content: center;
 }
 
-.themas li {
+#themas > li {
     flex: 1;
     color: #fff;
     background-color: #FECC4F;
@@ -85,7 +85,7 @@ ul.themas {
 		border-radius: 0.25em;
 }
 
-.themas li a {
+#themas > li > a {
   color: #fff;
   text-decoration: none;
   /* padding: 2em; */
