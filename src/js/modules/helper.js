@@ -26,7 +26,7 @@ export const helper = {
         // call funtction to get Data from API
         // getCategoryQuestionsAndAnswers(userCategoryChoice);
         // data.ifAnyAPIData(userCategoryChoice);
-      },
+      }
 
 
     });
