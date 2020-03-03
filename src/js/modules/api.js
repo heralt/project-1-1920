@@ -8,7 +8,6 @@ export function search(data) {
     const detail = 'Default';
 
     const url = `${cors}${baseUrl}${endPoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
-    console.log(url);
     return getData(url);
 }
 
