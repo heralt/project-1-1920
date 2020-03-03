@@ -22,7 +22,7 @@ export const helper = {
 
         // Remove if any previous questions from the unordered list
         main.textContent = "";
-
+        search(userCategoryChoice);
 
 
         // call funtction to get Data from API
