@@ -1,6 +1,7 @@
-//change routie
-routie({
-    "boek/:id": id => {
-        console.log(id);
-    },
-});
+export function routing() {
+    routie({
+        "boek-id/:id": id => {
+            console.log(id);
+        },
+    });
+}

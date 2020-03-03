@@ -1,5 +1,7 @@
 "use strict";
 
 import {fetchParameter} from "./modules/helper.js";
+import {routing} from "./modules/router.js";
 
 fetchParameter();
+routing();
