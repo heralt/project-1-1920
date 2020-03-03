@@ -1,5 +1,5 @@
 
-function search(data) {
+export function search(data) {
 
     if (data) {
 
