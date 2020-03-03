@@ -1,5 +1,5 @@
 "use strict";
-
+import {helper} from "./modules/helper.js";
 import {getData} from "./modules/api.js";
 
 const main = document.querySelector('main');
@@ -8,6 +8,8 @@ getData().then( json => {
     console.log(json);
     render(json);
 });
+
+helper.getCategoryChoice();
 
 function render(data) {
     const results = data.results;
@@ -25,5 +27,3 @@ function render(data) {
         main.insertAdjacentHTML('beforeend', html);
     });
 }
-
-

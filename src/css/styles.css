@@ -92,6 +92,7 @@ ul.themas {
   /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
+	text-transform: capitalize;
 }
 
 form {
