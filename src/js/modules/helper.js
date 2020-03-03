@@ -1,4 +1,4 @@
-//import {search} from "./api";
+import {search} from "../script.js";
 import {main} from "./render.js";
 
 // The list with category themes
@@ -24,7 +24,7 @@ export const helper = {
 
         // Remove if any previous questions from the unordered list
         main.textContent = "";
-        // search(userCategoryChoice);
+        search(userCategoryChoice);
 
 
         // call funtction to get Data from API
