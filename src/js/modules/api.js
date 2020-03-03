@@ -1,20 +1,22 @@
 
-search('school');
+search('fiets');
 
-export function search(data) {
+export function search(dataParam) {
     const cors = 'https://cors-anywhere.herokuapp.com/';
     const baseUrl = 'https://zoeken.oba.nl/api/v1';
     const endPoint = '/search/?q=';
     const key = '1e19898c87464e239192c8bfe422f280';
     const detail = 'Default';
-    let query = '';
+    let query = dataParam;
 
-    if(data) {
-        query = data;
-    } else {
-        query = 'kaas';
-    }
+    console.log(query);
+    // if(data) {
+    //     query = data;
+    // } else {
+    //     query = 'kaas';
+    // }
     const url = `${cors}${baseUrl}${endPoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
+    console.log("IS URL:  " +url);
     return getData(url);
 }
 
@@ -28,13 +30,7 @@ function fetchParameter() {
 
 function getData(url) {
     return fetch(url)
-        .then(response => {
-            return response.json();
-        })
-            .then(data => {
-                return data;
-            })
-        .catch(err => {
-            console.log(err)
-        })
+        .then(response => response.json())
+        .then(jsonReturnData => console.log(jsonReturnData.id));
+
 }

@@ -5,10 +5,10 @@ import {search} from "./modules/api.js";
 
 const main = document.querySelector('main');
 
-search().then( json => {
-    console.log(json);
-    render(json);
-});
+// search().then( json => {
+//     console.log(json);
+//     render(json);
+// });
 
 /*helper.getCategoryChoice();*/
 
@@ -35,5 +35,3 @@ routie({
         console.log(id);
     },
 });
-
-
