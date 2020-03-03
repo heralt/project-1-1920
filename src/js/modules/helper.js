@@ -1,4 +1,4 @@
-import {search} from "./api";
+import {search} from "./api.js";
 
 // The list with category themes
 export const ulCategoryList = document.querySelector(".themas");

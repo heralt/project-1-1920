@@ -1,16 +1,16 @@
 "use strict";
 
-import {helper} from "./modules/helper.js";
-import {getData} from "./modules/api.js";
+/*import {helper} from "./modules/helper.js";*/
+import {search} from "./modules/api.js";
 
 const main = document.querySelector('main');
 
-getData().then( json => {
+search().then( json => {
     console.log(json);
     render(json);
 });
 
-helper.getCategoryChoice();
+/*helper.getCategoryChoice();*/
 
 function render(data) {
     const results = data.results;
