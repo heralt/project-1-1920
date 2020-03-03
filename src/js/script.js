@@ -21,9 +21,18 @@ function render(data) {
               <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
               <img src="${
             item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
-        }">
+        }"></a>.
+              <p>${item.genres}</p>
             </article>
           `;
         main.insertAdjacentHTML('beforeend', html);
     });
 }
+
+routie({
+    "boek/:id": id => {
+        console.log(id);
+    },
+});
+
+
