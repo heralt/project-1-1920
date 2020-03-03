@@ -1,10 +1,12 @@
 import {search} from "./api";
+import {main} from "./render.js";
 
 // The list with category themes
 export const ulCategoryList = document.querySelector(".themas");
-export const main = document.querySelector('main');
 
 export const helper = {
+
+
 
   getCategoryChoice: function () {
 
