@@ -1,22 +1,34 @@
+export function search(parameter) {
+    const cors = 'https://cors-anywhere.herokuapp.com/';
+    const baseUrl = 'https://zoeken.oba.nl/api/v1';
+    const endPoint = '/search/?q=';
+    const key = '03b058d877ec4276bb63dd1c6e1f3768';
+    const detail = 'Default';
+    const pageSize = '&pagesize=20';
+    let page = '&page=1';
+    let query = '';
 
-const cors = 'https://cors-anywhere.herokuapp.com/';
-const baseUrl = 'https://zoeken.oba.nl/api/v1';
-const endpoint = '/search/?q=';
-const query = 'Harry';
-const key = '1e19898c87464e239192c8bfe422f280';
-const detail = 'Default';
-const url = `${cors}${baseUrl}${endpoint}${query}&p=jeugd&page=2&authorization=${key}&detaillevel=${detail}&output=json`;
-console.log(url);
+    if(parameter){
+        query = parameter;
+    } else {
+        query = 'voetbal';
+    }
 
-export function getData() {
+    //&refine=true&facet=genre(dieren)
+
+    const url = `${cors}${baseUrl}${endPoint}${query}&refine=true&facet=genre()${pageSize}${page}&authorization=${key}&detaillevel=${detail}&output=json`;
+    return url;
+}
+
+export function getData(url) {
     return fetch(url)
-        .then(response => {
-            return response.json();
-        })
-            .then(data => {
-                return data;
-            })
-        .catch(err => {
-            console.log(err)
-        })
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      return data;
+    })
+    .catch(err => {
+      console.log(err);
+    })
 }
