@@ -1,5 +1,6 @@
 
 const main = document.querySelector('main');
+const nav = document.querySelectorAll('nav')[1];
 
 export function clearScreen(id){
   document.querySelector(id).textContent="";
@@ -27,7 +28,7 @@ export function renderImages(data) {
   const results = data.results;
   console.dir(results);
   results.forEach((item) => {
-    const html = `
+      const html = `
             <article>
               <a href=#boek-id/${item.id}>
                 <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
@@ -36,4 +37,13 @@ export function renderImages(data) {
           `;
     main.insertAdjacentHTML('beforeend', html);
   });
+}
+
+export function renderNavButton(navValues){
+    navValues.forEach(item => {
+        const html = `
+        <button>${item}</button>
+        `;
+        nav.insertAdjacentHTML('beforeend', html);
+    });
 }

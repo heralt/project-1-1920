@@ -1,5 +1,5 @@
 import {getData, search} from "./api.js";
-import {renderImages,clearScreen} from "./render.js";
+import {renderImages,renderNavButton,clearScreen} from "./render.js";
 
 // The list with category themes
 const ulCategoryList = document.querySelector("#themas");
@@ -41,20 +41,20 @@ export const helper = {
 
                 switch(userCategoryChoice){
                     case 'Dieren':
-                        console.log('case', userCategoryChoice);
                         let dieren = ["Katten","Honden","Slangen","Leeuwen"];
+                        renderNavButton(dieren);
                         break;
                     case 'Sport':
-                        console.log('case', userCategoryChoice);
                         let sporten = ["Voetbal","Tennis","Hockey","Basketball"];
+                        renderNavButton(sporten);
                         break;
                     case 'Landen':
-                        console.log('case', userCategoryChoice);
                         let landen = ["America","Nederland","Engeland","Spanje"];
+                        renderNavButton(landen);
                         break;
                     case 'Geschiedenis':
-                        console.log('case', userCategoryChoice);
                         let geschiedenis = ["Voc","Oorlog","Revolutie","Slavernij"];
+                        renderNavButton(geschiedenis);
                         break;
                 }
 
