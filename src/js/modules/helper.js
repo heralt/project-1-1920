@@ -16,7 +16,7 @@ export function fetchParameter() {
 
 function renderPage(data){
     getData(search(data)).then( json => {
-        render(json);
+        renderImages(json);
     });
 }
 
@@ -42,6 +42,7 @@ export const helper = {
                 switch(userCategoryChoice){
                     case 'Dieren':
                         console.log('case', userCategoryChoice);
+                        let dieren = ["Katten","Honden","Slangen","Leeuwen"];
                         break;
                     case 'Sport':
                         console.log('case', userCategoryChoice);
