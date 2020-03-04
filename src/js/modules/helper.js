@@ -1,5 +1,5 @@
 import {getData, search} from "./api.js";
-import {render,clearScreen} from "./render.js";
+import {renderImages,clearScreen} from "./render.js";
 
 // The list with category themes
 const ulCategoryList = document.querySelector("#themas");
@@ -16,7 +16,7 @@ export function fetchParameter() {
 
 function renderPage(data){
     getData(search(data)).then( json => {
-        render(json);
+        renderImages(json);
     });
 }
 
@@ -34,7 +34,7 @@ export const helper = {
         ulCategoryList.addEventListener("click", function (element) {
 
             // If it is a list item that has been clicked
-            if(element.target.tagName == ("LI")){
+            if(element.target.tagName === ("LI")){
 
                 //Assign the list item ID to the variable
                 userCategoryChoice = element.target.getAttribute("data-category-id");
@@ -42,9 +42,19 @@ export const helper = {
                 switch(userCategoryChoice){
                     case 'Dieren':
                         console.log('case', userCategoryChoice);
+                        let dieren = ["Katten","Honden","Slangen","Leeuwen"];
                         break;
                     case 'Sport':
                         console.log('case', userCategoryChoice);
+                        let sporten = ["Voetbal","Tennis","Hockey","Basketball"];
+                        break;
+                    case 'Landen':
+                        console.log('case', userCategoryChoice);
+                        let landen = ["America","Nederland","Engeland","Spanje"];
+                        break;
+                    case 'Geschiedenis':
+                        console.log('case', userCategoryChoice);
+                        let geschiedenis = ["Voc","Oorlog","Revolutie","Slavernij"];
                         break;
                 }
 
