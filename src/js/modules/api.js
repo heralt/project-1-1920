@@ -15,7 +15,7 @@ export function search(parameter) {
     }
     //&refine=true&facet=genre(dieren)
 
-    const url = `${cors}${baseUrl}${endPoint}${query}${pageSize}${page}&authorization=${key}&refine=true&detaillevel=${detail}&output=json`;
+    const url = `${cors}${baseUrl}${endPoint}${query}%20kunst${pageSize}${page}&authorization=${key}&refine=true&detaillevel=${detail}&output=json`;
     return url;
 }
 

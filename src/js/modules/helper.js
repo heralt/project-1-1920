@@ -6,6 +6,7 @@ const ulCategoryList = document.querySelector("#themas");
 
 //search with searchbar
 document.getElementById('search').addEventListener("click",fetchParameter);
+const categoryButton = document.querySelectorAll('nav')[1];
 
 export function fetchParameter() {
   let searchValue = document.getElementById('search-value').value;
@@ -27,7 +28,16 @@ export const helper = {
 
     },*/
 
-    getCategoryChoice: function () {
+    getButtonDieren: function(){
+        let categoryPH = "";
+
+        categoryButton.addEventListener("click", function (element) {
+            console.log(element.target.value);
+
+        })
+    },
+
+    getCategoryChoice: function(){
         //A variable to store user input
         let userCategoryChoice  = "";
 

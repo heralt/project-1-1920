@@ -47,7 +47,7 @@ export function renderImages(data) {
 export function renderNavButton(navValues){
     navValues.forEach(item => {
         const html = `
-        <button>${item}</button>
+        <button type="button" value="${item}">${item}</button>
         `;
         nav.insertAdjacentHTML('beforeend', html);
     });
