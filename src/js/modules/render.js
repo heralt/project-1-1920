@@ -6,6 +6,10 @@ export function clearScreen(id){
   document.querySelector(id).textContent="";
 }
 
+export function clearNav(tag){
+    nav.textContent="";
+}
+
 // export function render(data) {
 //   const results = data.results;
 //   console.dir(results);
