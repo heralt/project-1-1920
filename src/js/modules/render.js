@@ -7,10 +7,10 @@ export function clearScreen(id){
 
 export function render(data) {
   const results = data.results;
-  console.dir(results);
-  results.forEach((item) => {
-    const html = `
-            <article>
+    console.dir(results);
+    results.forEach((item) => {
+        const html = `
+           <article>
               <h2>${item.titles[0]}</h2>
               <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
               <a href=#boek-id/${item.id}><img src="${
