@@ -207,6 +207,16 @@ main > article {
 	margin-right: 2em;
 }
 
+.article-header {
+    display: flex;
+    justify-content: center;
+}
+
+.article-content{
+    display: flex;
+    justify-content: center;
+}
+
 main article img {
 	width: 8em;
 	height: 10em;
