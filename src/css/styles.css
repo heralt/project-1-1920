@@ -63,9 +63,67 @@ header > svg {
 	height: 5em;
 }
 
-#blinkers {
-	display: none;
+/* ------------------- FLOAT ROBOT ------------------- */
+
+svg {
+	animation: floatRobot 2s ease-in-out infinite;
 }
+
+@keyframes floatRobot {
+  0%   {
+    transform: translateY(0);
+  }
+  50%  {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ------------------- FLOAT ROBOT ------------------- */
+
+/* ------------------- BLINK LIGHTBULB ------------------- */
+
+.blink_toggle {
+	animation: blinkBulb 2s ease-in-out infinite;
+}
+
+@keyframes blinkBulb {
+	0%   {
+    fill: #0080ff;
+  }
+  50%  {
+    fill: beige;
+  }
+  100% {
+    fill: #0080ff;
+  }
+}
+
+/* ------------------- BLINK LIGHTBULB ------------------- */
+
+/* ------------------- WINK EYE ------------------- */
+
+#right_eye {
+	/* fill: #0080ff; */
+	animation: winkEye 2s ease-in-out infinite;
+}
+
+@keyframes winkEye {
+	0%   {
+    fill: #0080ff;
+		/* fill: beige; */
+  }
+  50%  {
+    fill: beige;
+  }
+  100% {
+    fill: #0080ff;
+  }
+}
+
+/* ------------------- WINK EYE ------------------- */
 
 h1 {
   color: #0080ff;
@@ -142,15 +200,16 @@ main {
 }
 
 main > article {
-	flex: 1;
 	min-width: 15em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	border-radius: 10px 10px 10px 10px;
 	background: #5281FF;
 	margin-bottom: 2em;
 	margin-right: 2em;
+}
+
+main article img {
+	width: 8em;
+	height: 10em;
 }
 
 main > article:hover {
