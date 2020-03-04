@@ -46,6 +46,15 @@ export const helper = {
                         break;
                     case 'Sport':
                         console.log('case', userCategoryChoice);
+                        let sporten = ["","","",""];
+                        break;
+                    case 'Landen':
+                        console.log('case', userCategoryChoice);
+                        let landen = ["","","",""];
+                        break;
+                    case 'Geschiedenis':
+                        console.log('case', userCategoryChoice);
+                        let geschiedenis = ["","","",""];
                         break;
                 }
 
