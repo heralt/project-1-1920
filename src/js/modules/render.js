@@ -2,12 +2,8 @@
 const main = document.querySelector('main');
 const nav = document.querySelectorAll('nav')[1];
 
-export function clearScreen(id){
-  document.querySelector(id).textContent="";
-}
-
-export function clearNav(tag){
-    nav.textContent="";
+export function clearTag(tag){
+    tag === 'nav' ? nav.textContent="" : main.textContent="";
 }
 
 // export function render(data) {

@@ -1,5 +1,5 @@
 import {getData, search} from "./api.js";
-import {renderImages,renderNavButton,clearScreen,clearNav} from "./render.js";
+import {renderImages,renderNavButton,clearTag} from "./render.js";
 
 // The list with category themes
 const ulCategoryList = document.querySelector("#themas");
@@ -10,7 +10,7 @@ document.getElementById('search').addEventListener("click",fetchParameter);
 export function fetchParameter() {
   let searchValue = document.getElementById('search-value').value;
 
-  clearScreen('main');
+  clearTag('main');
   renderPage(searchValue);
 }
 
@@ -42,28 +42,28 @@ export const helper = {
                 switch(userCategoryChoice){
                     case 'Dieren':
                         let dieren = ["Katten","Honden","Slangen","Leeuwen"];
-                        clearNav('nav');
+                        clearTag('nav');
                         renderNavButton(dieren);
                         break;
                     case 'Sport':
                         let sporten = ["Voetbal","Tennis","Hockey","Basketball"];
-                        clearNav('nav');
+                        clearTag('nav');
                         renderNavButton(sporten);
                         break;
                     case 'Landen':
                         let landen = ["America","Nederland","Engeland","Spanje"];
-                        clearNav('nav');
+                        clearTag('nav');
                         renderNavButton(landen);
                         break;
                     case 'Geschiedenis':
                         let geschiedenis = ["Voc","Oorlog","Revolutie","Slavernij"];
-                        clearNav('nav');
+                        clearTag('nav');
                         renderNavButton(geschiedenis);
                         break;
                 }
 
                 //Empties screen from previous content
-                clearScreen('main');
+                clearTag('main');
                 renderPage(userCategoryChoice);
             }
         });
