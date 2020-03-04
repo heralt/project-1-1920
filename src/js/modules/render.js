@@ -29,9 +29,14 @@ export function renderImages(data) {
   results.forEach((item) => {
     const html = `
             <article>
-              <a href=#boek-id/${item.id}>
-                <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
-              </a>
+              <div class="article-header">
+                <input type="checkbox" id="${item.id}">
+              </div>
+              <div class="article-content">
+                <a href=#boek-id/${item.id}>
+                  <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
+                </a>
+              </div>
             </article>
           `;
     main.insertAdjacentHTML('beforeend', html);

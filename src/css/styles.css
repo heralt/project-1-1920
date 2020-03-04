@@ -142,15 +142,16 @@ main {
 }
 
 main > article {
-	flex: 1;
 	min-width: 15em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	border-radius: 10px 10px 10px 10px;
 	background: #5281FF;
 	margin-bottom: 2em;
 	margin-right: 2em;
+}
+
+main article img {
+	width: 8em;
+	height: 10em;
 }
 
 main > article:hover {
