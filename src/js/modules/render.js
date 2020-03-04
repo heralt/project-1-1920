@@ -22,3 +22,18 @@ export function render(data) {
     main.insertAdjacentHTML('beforeend', html);
   });
 }
+
+export function renderImages(data) {
+  const results = data.results;
+  console.dir(results);
+  results.forEach((item) => {
+    const html = `
+            <article>
+              <a href=#boek-id/${item.id}>
+                <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
+              </a>
+            </article>
+          `;
+    main.insertAdjacentHTML('beforeend', html);
+  });
+}

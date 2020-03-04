@@ -1,5 +1,5 @@
 import {getData, search} from "./api.js";
-import {render,clearScreen} from "./render.js";
+import {render,renderImages,clearScreen} from "./render.js";
 
 // The list with category themes
 export const ulCategoryList = document.querySelector("#themas");
@@ -12,7 +12,7 @@ export function fetchParameter() {
 
   getData(search(searchValue)).then( json => {
     console.log(json);
-    render(json);
+    renderImages(json);
   });
 }
 
@@ -37,7 +37,8 @@ export const helper = {
 
         getData(search(userCategoryChoice)).then( json => {
           console.log(json);
-          render(json);
+          // render(json);
+          renderImages(json);
         });
       }
 

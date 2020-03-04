@@ -5,7 +5,7 @@ export function search(parameter) {
     const endPoint = '/search/?q=';
     const key = '03b058d877ec4276bb63dd1c6e1f3768';
     const detail = 'Default';
-    const pageSize = '&pagesize=10';
+    const pageSize = '&pagesize=8';
     let query = '';
 
     if(parameter){

@@ -100,14 +100,49 @@ form {
 	padding: 1em 2em;
 	justify-content: center;
 	height: 3em;
+	background-color: #0080ff;
 }
 
 form > input {
 	flex: 3;
-	max-width: 60em;
+	/* max-width: 60em; */
+	max-width: 40em;
+	border: 5px solid #FECC4F;
 }
 
 form > button {
 	flex: 1;
-	max-width: 15em;
+	font-size: 1em;
+	/* max-width: 15em; */
+	max-width: 10em;
+}
+
+input {
+	/* font-family: 'Roboto', sans-serif; */
+}
+
+input[placeholder] {
+	padding-left: 0.7em;
+	font-size: 1em;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1em 2em;
+}
+
+main > article {
+	flex: 1;
+	min-width: 20em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	background-color: #5934A5;
+	border: none;
+	color: #fff;
 }
