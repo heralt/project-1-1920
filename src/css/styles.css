@@ -143,10 +143,18 @@ main {
 
 main > article {
 	flex: 1;
-	min-width: 20em;
+	min-width: 15em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 10px 10px 10px 10px;
+	background: #5281FF;
+	margin-bottom: 2em;
+	margin-right: 2em;
+}
+
+main > article:hover {
+	box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.75);
 }
 
 button {
