@@ -46,15 +46,15 @@ export const helper = {
                         break;
                     case 'Sport':
                         console.log('case', userCategoryChoice);
-                        let sporten = ["","","",""];
+                        let sporten = ["Voetbal","Tennis","Hockey","Basketball"];
                         break;
                     case 'Landen':
                         console.log('case', userCategoryChoice);
-                        let landen = ["","","",""];
+                        let landen = ["America","Nederland","Engeland","Spanje"];
                         break;
                     case 'Geschiedenis':
                         console.log('case', userCategoryChoice);
-                        let geschiedenis = ["","","",""];
+                        let geschiedenis = ["Voc","Oorlog","Revolutie","Slavernij"];
                         break;
                 }
 
