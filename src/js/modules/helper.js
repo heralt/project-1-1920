@@ -34,7 +34,7 @@ export const helper = {
         ulCategoryList.addEventListener("click", function (element) {
 
             // If it is a list item that has been clicked
-            if(element.target.tagName == ("LI")){
+            if(element.target.tagName === ("LI")){
 
                 //Assign the list item ID to the variable
                 userCategoryChoice = element.target.getAttribute("data-category-id");
@@ -46,6 +46,15 @@ export const helper = {
                         break;
                     case 'Sport':
                         console.log('case', userCategoryChoice);
+                        let sporten = ["","","",""];
+                        break;
+                    case 'Landen':
+                        console.log('case', userCategoryChoice);
+                        let landen = ["","","",""];
+                        break;
+                    case 'Geschiedenis':
+                        console.log('case', userCategoryChoice);
+                        let geschiedenis = ["","","",""];
                         break;
                 }
 

@@ -4,25 +4,25 @@ export function search(parameter) {
     const endPoint = '/search/?q=';
     const key = '03b058d877ec4276bb63dd1c6e1f3768';
     const detail = 'Default';
-    const pageSize = '&pagesize=20';
+    const pageSize = '&pagesize=10';
     let page = '&page=1';
     let query = '';
 
     if(parameter){
         query = parameter;
     } else {
-        query = 'voetbal';
+        query = 'special:all';
     }
-
     //&refine=true&facet=genre(dieren)
 
-    const url = `${cors}${baseUrl}${endPoint}${query}&refine=true&facet=genre()${pageSize}${page}&authorization=${key}&detaillevel=${detail}&output=json`;
+    const url = `${cors}${baseUrl}${endPoint}${query}${pageSize}${page}&authorization=${key}&refine=true&detaillevel=${detail}&output=json`;
     return url;
 }
 
 export function getData(url) {
     return fetch(url)
     .then(response => {
+        console.log(response);
       return response.json();
     })
     .then(data => {
