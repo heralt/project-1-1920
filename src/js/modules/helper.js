@@ -1,5 +1,5 @@
 import {getData, search} from "./api.js";
-import {render,clearScreen} from "./render.js";
+import {renderImages,clearScreen} from "./render.js";
 
 // The list with category themes
 const ulCategoryList = document.querySelector("#themas");
