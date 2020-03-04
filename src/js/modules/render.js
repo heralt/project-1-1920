@@ -1,5 +1,6 @@
 
 const main = document.querySelector('main');
+const nav = document.querySelectorAll('nav')[1];
 
 export function clearScreen(id){
   document.querySelector(id).textContent="";
@@ -27,7 +28,7 @@ export function renderImages(data) {
   const results = data.results;
   console.dir(results);
   results.forEach((item) => {
-    const html = `
+      const html = `
             <article>
               <div class="article-header">
                 <input type="checkbox" id="${item.id}">
@@ -41,4 +42,13 @@ export function renderImages(data) {
           `;
     main.insertAdjacentHTML('beforeend', html);
   });
+}
+
+export function renderNavButton(navValues){
+    navValues.forEach(item => {
+        const html = `
+        <button>${item}</button>
+        `;
+        nav.insertAdjacentHTML('beforeend', html);
+    });
 }

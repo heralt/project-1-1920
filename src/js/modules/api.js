@@ -25,7 +25,6 @@ export function getData(url) {
       return response.json();
     })
     .then(data => {
-        console.log(data);
       return data;
     })
     .catch(err => {
