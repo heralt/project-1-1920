@@ -59,6 +59,14 @@ header, nav {
 	padding: 1em 2em;
 }
 
+header > svg {
+	height: 5em;
+}
+
+#blinkers {
+	display: none;
+}
+
 h1 {
   color: #0080ff;
   font-family: 'Montserrat', sans-serif;
