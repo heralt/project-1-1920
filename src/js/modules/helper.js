@@ -34,7 +34,7 @@ export const helper = {
         ulCategoryList.addEventListener("click", function (element) {
 
             // If it is a list item that has been clicked
-            if(element.target.tagName == ("LI")){
+            if(element.target.tagName === ("LI")){
 
                 //Assign the list item ID to the variable
                 userCategoryChoice = element.target.getAttribute("data-category-id");
