@@ -130,7 +130,7 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 1em 2em;
+	padding: 4em 2em;
 }
 
 main > article {
