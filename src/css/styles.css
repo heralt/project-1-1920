@@ -125,10 +125,6 @@ svg {
 	}
 }
 
-/* ------------------- WINK EYE 2 ------------------- */
-
-/* ------------------- WINK EYE ------------------- */
-
 #right_eye {
 	/* fill: #0080ff; */
 	animation: winkEye 2s ease-in-out infinite;
@@ -296,7 +292,29 @@ main > article:hover {
 	visibility: visible;
 }
 
-.article-header {
+#detail > article {
+	min-width: 15em;
+	width: 80%;
+	height: 80%;
+	border-radius: 10px 10px 10px 10px;
+	background: #0080ff;
+	margin: 2em;
+	margin-right: 2em;
+}
+
+#detail > article:hover {
+	box-shadow: 8px 8px 15px 0px #FECC4F;
+}
+
+#detail .article-header {
+	display: flex;
+	justify-content: center;
+	background-color: #FECC4F;
+	margin-bottom: 1em;
+	border-radius: 9px 9px 0px 0px;
+}
+
+main .article-header {
 	display: flex;
 	justify-content: center;
 	background-color: #FECC4F;
@@ -361,4 +379,8 @@ main article img {
 
 .header-bookmark {
 	float: right;
+}
+
+#detail {
+	display: none;
 }

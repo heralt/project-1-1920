@@ -1,15 +1,18 @@
-import {fetchParameter, helper} from "./helper.js";
-import {renderLoader} from "./render.js";
+import {helper} from "./helper.js";
 
 export function routing() {
+
+    //if bookmark is pressed display popup
+    helper.getBookmarked();
+
     routie({
-        "": () => {
+        '': () => {
             helper.getCategoryChoice();
             helper.getButtonDieren();
-            fetchParameter();
+            helper.fetchParameter();
         },
-        "#boek-id/:id": id => {
-            console.log(id);
+        'detail/:id': id => {
+            helper.getDetailData(id);
         },
     });
 }

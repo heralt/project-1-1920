@@ -1,72 +1,88 @@
 
 const main = document.querySelector('main');
+const detailSection = document.querySelector('#detail');
 const nav = document.querySelectorAll('nav')[1];
-const loaderSvg = document.getElementById("loading_state");
 
-export function clearTag(tag){
-    tag === 'nav' ? nav.textContent="" : main.textContent="";
+export function clearTag(tag) {
+    return tag === 'nav' ? nav.textContent = ""
+         :tag === 'main' ? main.textContent = ""
+         :detailSection.textContent = "";
 }
 
 // remove loader
-export function renderLoader(state) {
-    //loaderSvg.style.display = state;
-}
-
-// export function render(data) {
-//   const results = data.results;
-//   console.dir(results);
-//   results.forEach((item) => {
-//     const html = `
-//             <article>
-//               <h2>${item.titles[0]}</h2>
-//               <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
-//               <a href=#boek-id/${item.id}><img src="${
-//         item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
-//     }"></a>.
-//               <p>${item.genres}</p>
-//             </article>
-//           `;
-//     main.insertAdjacentHTML('beforeend', html);
-//   });
+// export function renderLoader(state) {
+//     loaderSvg.style.display = state;
 // }
+
+export function renderDetail(data) {
+    clearTag('detail');
+    clearTag('main');
+  console.log("renderDetailData: ", data);
+  const result = data.record;
+  main.style.display = 'none';
+  detailSection.style.display = 'flex';
+
+  const html = `
+  <article>
+  <div class="article-header">
+  <h2>${result.titles[0]}</h2>
+  </div>
+  <div class="article-content">
+  <div class="content-image">
+  <img src="${result.coverimages[0] ? result.coverimages[1] : 'Geen samenvatting'}">
+  </div>
+  <div class="content-text">
+  <h4>Samenvatting</h4>
+  <p>${typeof result.summaries == "undefined" ? 'N.V.T' : result.summaries[0]}</p>
+  <p>ISBN     : ${result.isbn}</p>
+  <p>Uitgever : ${result.publisher[0]}</p>
+  <a href="${result.detailLink}">OBA Link</a>
+  </div>
+  </article>
+  `;
+  detailSection.insertAdjacentHTML('beforeend', html);
+};
+
+
 
 function addToFavs(item) {
   let bookmarks = [];
   bookmarks.push(item);
 }
 
-export function renderImages(data) {
-
+export function renderOverview(data) {
   const results = data.results;
-  console.log(results)
+  console.log("renderOverviewData: ", data);
+  main.style.display = 'flex';
+  detailSection.style.display = 'none';
   results.forEach((item) => {
-      const html = `
-            <article>
-              <div class="article-header">
-              <input type="checkbox" id="${item.id}">
-                <label for="${item.id}">Markeer uw favoriet</label>
-              </div>
-              <div class="article-content">
-                <div class="content-image">
-                <a href="#${addToFavs(item)}">
-                  <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
+    const html = `
+    <article>
+        <div class="article-header">
+            <input type="checkbox" id="${item.id}">
+            <label for="${item.id}">Markeer uw favoriet</label>
+        </div>
+        <div class="article-content">
+            <div class="content-image">
+                <a href="#detail/${item.id}">
+                <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
                 </a>
-                </div>
-                <div class="content-text">
-                <p>Titel :  ${item.titles[0]}</p>
-                </div>
-              </div>
-            </article>
-          `;
+            </div>
+        <div class="content-text">
+            <p>Titel :  ${item.titles[0]}</p>
+        </div>
+    </div>
+    </article>
+    `;
     main.insertAdjacentHTML('beforeend', html);
   });
 }
 
-export function renderNavButton(navValues){
-    navValues.forEach(item => {
-        const html = `
-        <button class="searchBtn" type="button" value="${item}">${item}</button>
-        `;
-        nav.insertAdjacentHTML('beforeend', html);
-    });
+export function renderNavButton(navValues) {
+  navValues.forEach(item => {
+    const html = `
+    <button class="searchBtn" type="button" value="${item}">${item}</button>
+    `;
+    nav.insertAdjacentHTML('beforeend', html);
+  });
 }
