@@ -290,7 +290,7 @@ main article img {
 }
 
 .header {
-	
+	display: flow-root;
 }
 
 .header-logo {
