@@ -190,6 +190,8 @@ ul {
 	text-transform: capitalize;
 }
 
+
+
 form {
 	display: flex;
 	padding: 1em 2em;
@@ -233,7 +235,7 @@ main {
 	background-color: #fff;
 	/* width: 800px;
 	height: 700px; */
-	width: 50em;
+	width: 25em;
 	height: 43.75em;
 	box-shadow: 8px 8px 15px 0px #FECC4F;
 }
@@ -324,6 +326,13 @@ main article img {
 	width: 10em;
 	padding: 1em;
 }
+
+.saveBox {
+	display: flex;
+	justify-content: end;
+	margin: -2.5em 5em 10em 0;
+}
+
 .header {
 	display: flow-root;
 }
