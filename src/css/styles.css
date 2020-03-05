@@ -125,10 +125,6 @@ svg {
 	}
 }
 
-/* ------------------- WINK EYE 2 ------------------- */
-
-/* ------------------- WINK EYE ------------------- */
-
 #right_eye {
 	/* fill: #0080ff; */
 	animation: winkEye 2s ease-in-out infinite;
