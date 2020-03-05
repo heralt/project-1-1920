@@ -244,8 +244,6 @@ main > article:hover {
 }
 
 #detail > article {
-	display: flex;
-	justify-content: center;
 	min-width: 15em;
 	width: 80%;
 	height: 80%;
@@ -257,10 +255,17 @@ main > article:hover {
 
 #detail > article:hover {
 	box-shadow: 8px 8px 15px 0px #FECC4F;
-	visibility: visible;
 }
 
-.article-header {
+#detail .article-header {
+	display: flex;
+	justify-content: center;
+	background-color: #FECC4F;
+	margin-bottom: 1em;
+	border-radius: 9px 9px 0px 0px;
+}
+
+main .article-header {
 	display: flex;
 	justify-content: center;
 	background-color: #FECC4F;

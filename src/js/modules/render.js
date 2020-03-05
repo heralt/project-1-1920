@@ -29,7 +29,7 @@ export function renderDetail(data) {
   </div>
   <div class="content-text">
   <h4>Samenvatting</h4>
-  <p>${result.summaries[0]}</p>
+  <p>${typeof result.summaries == "undefined" ? 'N.V.T' : result.summaries[0]}</p>
   <p>ISBN     : ${result.isbn}</p>
   <p>Uitgever : ${result.publisher[0]}</p>
   <a href="${result.detailLink}">OBA Link</a>
