@@ -24,6 +24,12 @@ export function clearScreen(id){
 //   });
 // }
 
+function addToFavs(item) {
+  let bookmarks = [];
+  bookmarks.push(item);
+  console.log(bookmarks);
+}
+
 export function renderImages(data) {
   const results = data.results;
   console.dir(results);
@@ -31,12 +37,18 @@ export function renderImages(data) {
       const html = `
             <article>
               <div class="article-header">
-                <input type="checkbox" id="${item.id}">
+              <input type="checkbox" id="${item.id}">
+                <label for="${item.id}">Markeer uw favoriet</label>
               </div>
               <div class="article-content">
-                <a href=#boek-id/${item.id}>
+                <div class="content-image">
+                <a href="#${addToFavs(item)}">
                   <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
                 </a>
+                </div>
+                <div class="content-text">
+                <p>Titel :  ${item.titles[0]}</p>
+                </div>
               </div>
             </article>
           `;

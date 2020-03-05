@@ -200,21 +200,40 @@ main {
 }
 
 main > article {
+	cursor: pointer;
 	min-width: 15em;
+	max-width: 15em;
 	border-radius: 10px 10px 10px 10px;
-	background: #5281FF;
-	margin-bottom: 2em;
+	background: #0080ff;
+	margin: 2em;
 	margin-right: 2em;
+}
+
+main > article:hover {
+	box-shadow: 8px 8px 15px 0px #FECC4F;
+	visibility: visible;
 }
 
 .article-header {
     display: flex;
-    justify-content: center;
+	justify-content: center;
+	background-color: #FECC4F;
+	border-radius: 9px 9px 0px 0px;
+	visibility: hidden;
 }
 
-.article-content{
-    display: flex;
-    justify-content: center;
+.article-header input {
+	cursor: pointer;
+	visibility: hidden;
+}
+
+.article-header label {
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+
+main article:hover .article-header{
+    visibility: visible;
 }
 
 main article img {
@@ -222,12 +241,37 @@ main article img {
 	height: 10em;
 }
 
-main > article:hover {
-	box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.75);
+.content-image {
+	display: flex;
+	justify-content: center;
 }
 
-button {
+.content-text {
+	display: flex;
+	justify-content: center;
+	padding: 1em;
+	color: white;
+	font-weight: bold;
+}
+
+.searchBtn {
 	background-color: #5934A5;
 	border: none;
 	color: #fff;
+}
+
+.header {
+	
+}
+
+.header-logo {
+    float: left;
+}
+
+.header-logo svg{
+    max-height: 4em;
+}
+
+.header-bookmark {
+    float: right;
 }
