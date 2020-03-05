@@ -4,7 +4,9 @@ const detailSection = document.querySelector('#detail');
 const nav = document.querySelectorAll('nav')[1];
 
 export function clearTag(tag) {
-  tag === 'nav' ? nav.textContent = "" : main.textContent = "";
+    return tag === 'nav' ? nav.textContent = ""
+         :tag === 'main' ? main.textContent = ""
+         :detailSection.textContent = "";
 }
 
 // remove loader
@@ -13,11 +15,12 @@ export function clearTag(tag) {
 // }
 
 export function renderDetail(data) {
+    clearTag('detail');
   console.log("renderDetailData: ", data);
   const result = data.record;
   main.style.display = 'none';
   detailSection.style.display = 'flex';
-  
+
   const html = `
   <article>
   <div class="article-header">
@@ -52,19 +55,19 @@ export function renderOverview(data) {
   results.forEach((item) => {
     const html = `
     <article>
-    <div class="article-header">
-    <input type="checkbox" id="${item.id}">
-    <label for="${item.id}">Markeer uw favoriet</label>
-    </div>
-    <div class="article-content">
-    <div class="content-image">
-    <a href="#detail/${item.id}">
-    <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
-    </a>
-    </div>
-    <div class="content-text">
-    <p>Titel :  ${item.titles[0]}</p>
-    </div>
+        <div class="article-header">
+            <input type="checkbox" id="${item.id}">
+            <label for="${item.id}">Markeer uw favoriet</label>
+        </div>
+        <div class="article-content">
+            <div class="content-image">
+                <a href="#detail/${item.id}">
+                <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
+                </a>
+            </div>
+        <div class="content-text">
+            <p>Titel :  ${item.titles[0]}</p>
+        </div>
     </div>
     </article>
     `;

@@ -34,7 +34,7 @@ export const helper = {
 
     fetchParameter: function() {
         let searchValue = document.getElementById('search-value').value;
-    
+
         // clearTag('main');
         this.getOverviewData(searchValue);
     },
@@ -50,7 +50,7 @@ export const helper = {
                 categoryPH = element.target.value;
 
                 clearTag('main');
-                getOverviewData(`${userCategoryChoice}%20${categoryPH}`);
+                helper.getOverviewData(`${userCategoryChoice}%20${categoryPH}`);
             }
         })
     },
@@ -92,7 +92,7 @@ export const helper = {
 
                 //Empties screen from previous content
                 clearTag('main');
-                getOverviewData(userCategoryChoice);
+                helper.getOverviewData(userCategoryChoice);
             }
         });
     }
