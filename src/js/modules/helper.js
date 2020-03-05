@@ -4,15 +4,16 @@ import {renderImages,renderNavButton,clearTag,renderLoader} from "./render.js";
 // The list with category themes
 const ulCategoryList = document.querySelector("#themas");
 
-//search with searchbar
-document.getElementById('search').addEventListener("click",fetchParameter);
-
 //search with button
 const categoryButton = document.querySelectorAll('nav')[1];
 
+//search with searchbar
+document.getElementById('search').addEventListener("click",fetchParameter);
+
 function renderPage(data){
+    renderLoader('flex');
     getData(search(data)).then( json => {
-        renderLoader();
+        renderLoader('none');
         renderImages(json);
     });
 }
@@ -26,7 +27,6 @@ export const helper = {
 
     getButtonDieren: function(){
         let categoryPH = "";
-
         //on button press subcategory
         categoryButton.addEventListener("click", function (element) {
 
@@ -34,14 +34,13 @@ export const helper = {
             // renderPage(`${element.target.value}%20Dieren`): console.log("no value found for this click event!");
             if(element.target.tagName === ('BUTTON')){
                 categoryPH = element.target.value;
-                console.log('button: ' + categoryPH)
             }
             clearTag('main');
-            console.log(`Dieren%${categoryPH}`);
-            renderPage(`Dieren%${categoryPH}`);
+            renderPage(`Dieren%20${categoryPH}`);
         })
     },
 
+    //Category buttons
     getCategoryChoice: function(){
         //A variable to store user input
         let userCategoryChoice  = "";
