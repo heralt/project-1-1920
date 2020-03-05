@@ -4,7 +4,7 @@ export function search(parameter) {
     const endPoint = '/search/?q=';
     const key = '03b058d877ec4276bb63dd1c6e1f3768';
     const detail = 'Default';
-    const pageSize = '&pagesize=10';
+    const pageSize = '&pagesize=20';
     let page = '&page=1';
     let query = '';
 
@@ -13,9 +13,8 @@ export function search(parameter) {
     } else {
         query = 'special:all';
     }
-    //&refine=true&facet=genre(dieren)
 
-    const url = `${cors}${baseUrl}${endPoint}${query}%20kunst${pageSize}${page}&authorization=${key}&refine=true&detaillevel=${detail}&output=json`;
+    const url = `${cors}${baseUrl}${endPoint}${query}${pageSize}${page}&authorization=${key}&refine=true&detaillevel=${detail}&output=json`;
     return url;
 }
 
