@@ -7,6 +7,9 @@ const ulCategoryList = document.querySelector("#themas");
 //search with button
 const categoryButton = document.querySelectorAll('nav')[1];
 
+//bookmark button
+const bookmarkButton = document.getElementById('bookmarked');
+
 let userCategoryChoice  = "";
 
 export const helper = {
@@ -95,6 +98,14 @@ export const helper = {
                 helper.getOverviewData(userCategoryChoice);
             }
         });
+    },
+
+    getBookmarked: function(){
+        bookmarkButton.addEventListener("click", function() {
+            alert(
+                "Bookmarked books:"
+            );
+        })
     }
 };
 

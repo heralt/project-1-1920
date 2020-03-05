@@ -16,6 +16,7 @@ export function clearTag(tag) {
 
 export function renderDetail(data) {
     clearTag('detail');
+    clearTag('main');
   console.log("renderDetailData: ", data);
   const result = data.record;
   main.style.display = 'none';
