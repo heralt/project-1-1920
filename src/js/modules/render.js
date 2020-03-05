@@ -2,8 +2,16 @@
 const main = document.querySelector('main');
 const nav = document.querySelectorAll('nav')[1];
 
-export function clearScreen(id){
-  document.querySelector(id).textContent="";
+export function clearTag(tag){
+    tag === 'nav' ? nav.textContent="" : main.textContent="";
+}
+
+// remove loader
+export function renderLoader() {
+
+  const loaderSvg = document.querySelector("#loading_state");
+  // loaderSvg.textContent = "";
+  loaderSvg.style.display = "none";
 }
 
 // export function render(data) {
@@ -59,7 +67,7 @@ export function renderImages(data) {
 export function renderNavButton(navValues){
     navValues.forEach(item => {
         const html = `
-        <button>${item}</button>
+        <button type="button" value="${item}">${item}</button>
         `;
         nav.insertAdjacentHTML('beforeend', html);
     });
