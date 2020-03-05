@@ -7,14 +7,6 @@ const ulCategoryList = document.querySelector("#themas");
 //search with searchbar
 document.getElementById('search').addEventListener("click",fetchParameter);
 
-export function fetchParameter() {
-  let searchValue = document.getElementById('search-value').value;
-
-  // clearTag('main');
-  // setTimeout(function(){ renderLoader(); }, 5000);
-  renderPage(searchValue);
-}
-
 function renderPage(data){
     getData(search(data)).then( json => {
         renderLoader();
@@ -71,3 +63,11 @@ export const helper = {
         });
     }
 };
+
+
+export function fetchParameter() {
+    let searchValue = document.getElementById('search-value').value;
+
+    // clearTag('main');
+    renderPage(searchValue);
+}
