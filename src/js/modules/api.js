@@ -4,7 +4,7 @@ export function search(parameter) {
     const endPoint = '/search/?q=';
     const key = '17a9c4d4d56a41b55abc2d3096e94be4';
     const detail = 'Default';
-    const pageSize = '&pagesize=10';
+    const pageSize = '&pagesize=20';
     let page = '&page=1';
     let query = '';
 
@@ -13,7 +13,6 @@ export function search(parameter) {
     } else {
         query = 'special:all';
     }
-    //&refine=true&facet=genre(dieren)
 
     const url = `${cors}${baseUrl}${endPoint}${query}${pageSize}${page}&authorization=${key}&refine=true&detaillevel=${detail}&output=json`;
     return url;

@@ -7,13 +7,8 @@ const ulCategoryList = document.querySelector("#themas");
 //search with searchbar
 document.getElementById('search').addEventListener("click",fetchParameter);
 
-export function fetchParameter() {
-  let searchValue = document.getElementById('search-value').value;
-
-  // clearTag('main');
-  // setTimeout(function(){ renderLoader(); }, 5000);
-  renderPage(searchValue);
-}
+//search with button
+const categoryButton = document.querySelectorAll('nav')[1];
 
 function renderPage(data){
     getData(search(data)).then( json => {
@@ -29,7 +24,25 @@ export const helper = {
 
     },*/
 
-    getCategoryChoice: function () {
+    getButtonDieren: function(){
+        let categoryPH = "";
+
+        //on button press subcategory
+        categoryButton.addEventListener("click", function (element) {
+
+            // typeof element.target.value !== undefined ?
+            // renderPage(`${element.target.value}%20Dieren`): console.log("no value found for this click event!");
+            if(element.target.tagName === ('BUTTON')){
+                categoryPH = element.target.value;
+                console.log('button: ' + categoryPH)
+            }
+            clearTag('main');
+            console.log(`Dieren%${categoryPH}`);
+            renderPage(`Dieren%${categoryPH}`);
+        })
+    },
+
+    getCategoryChoice: function(){
         //A variable to store user input
         let userCategoryChoice  = "";
 
@@ -71,3 +84,10 @@ export const helper = {
         });
     }
 };
+
+export function fetchParameter() {
+    let searchValue = document.getElementById('search-value').value;
+
+    // clearTag('main');
+    renderPage(searchValue);
+}
