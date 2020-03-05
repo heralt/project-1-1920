@@ -42,6 +42,8 @@ export function renderDetail(data) {
   detailSection.insertAdjacentHTML('beforeend', html);
 };
 
+
+
 function addToFavs(item) {
   let bookmarks = [];
   bookmarks.push(item);
