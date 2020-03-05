@@ -55,7 +55,7 @@ body > header {
 }
 
 header, nav {
-  /* margin: 1em 2em; */
+	/* margin: 1em 2em; */
 	padding: 1em 2em;
 }
 
@@ -72,15 +72,15 @@ svg {
 }
 
 @keyframes floatRobot {
-  0%   {
-    transform: translateY(0);
-  }
-  50%  {
-    transform: translateY(30%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0%   {
+		transform: translateY(0);
+	}
+	50%  {
+		transform: translateY(30%);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 /* ------------------- FLOAT ROBOT ------------------- */
@@ -93,14 +93,14 @@ svg {
 
 @keyframes blinkBulb {
 	0%   {
-    fill: #0080ff;
-  }
-  50%  {
-    fill: beige;
-  }
-  100% {
-    fill: #0080ff;
-  }
+		fill: #0080ff;
+	}
+	50%  {
+		fill: beige;
+	}
+	100% {
+		fill: #0080ff;
+	}
 }
 
 /* ------------------- BLINK LIGHTBULB ------------------- */
@@ -114,15 +114,15 @@ svg {
 
 @keyframes winkEye {
 	0%   {
-    fill: #0080ff;
+		fill: #0080ff;
 		/* fill: beige; */
-  }
-  50%  {
-    fill: beige;
-  }
-  100% {
-    fill: #0080ff;
-  }
+	}
+	50%  {
+		fill: beige;
+	}
+	100% {
+		fill: #0080ff;
+	}
 }
 
 /* ------------------- WINK EYE 2 ------------------- */
@@ -136,43 +136,43 @@ svg {
 
 @keyframes winkEye {
 	0%   {
-    fill: #0080ff;
+		fill: #0080ff;
 		/* fill: beige; */
-  }
-  50%  {
-    fill: beige;
-  }
-  100% {
-    fill: #0080ff;
-  }
+	}
+	50%  {
+		fill: beige;
+	}
+	100% {
+		fill: #0080ff;
+	}
 }
 
 /* ------------------- WINK EYE ------------------- */
 
 h1 {
-  color: #0080ff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
+	color: #0080ff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
 }
 
 ul {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 #themas > li {
-    flex: 1;
-    color: #fff;
-    background-color: #FECC4F;
-    list-style-type: none;
-    margin: 2em 1em;
-    min-height: 10em;
-    max-width: 15em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-		border-radius: 0.25em;
+	flex: 1;
+	color: #fff;
+	background-color: #FECC4F;
+	list-style-type: none;
+	margin: 2em 1em;
+	min-height: 10em;
+	max-width: 15em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.25em;
 }
 
 #themas > li:hover {
@@ -181,12 +181,12 @@ ul {
 }
 
 #themas > li > a {
-  color: #fff;
-  text-decoration: none;
-  /* padding: 2em; */
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	/* padding: 2em; */
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
 	text-transform: capitalize;
 }
 
@@ -229,21 +229,40 @@ main {
 }
 
 main > article {
+	cursor: pointer;
 	min-width: 15em;
+	max-width: 15em;
 	border-radius: 10px 10px 10px 10px;
-	background: #5281FF;
-	margin-bottom: 2em;
+	background: #0080ff;
+	margin: 2em;
 	margin-right: 2em;
 }
 
-.article-header {
-    display: flex;
-    justify-content: center;
+main > article:hover {
+	box-shadow: 8px 8px 15px 0px #FECC4F;
+	visibility: visible;
 }
 
-.article-content{
-    display: flex;
-    justify-content: center;
+.article-header {
+	display: flex;
+	justify-content: center;
+	background-color: #FECC4F;
+	border-radius: 9px 9px 0px 0px;
+	visibility: hidden;
+}
+
+.article-header input {
+	cursor: pointer;
+	visibility: hidden;
+}
+
+.article-header label {
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+
+main article:hover .article-header{
+	visibility: visible;
 }
 
 main article img {
@@ -251,12 +270,39 @@ main article img {
 	height: 10em;
 }
 
-main > article:hover {
-	box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.75);
+.content-image {
+	display: flex;
+	justify-content: center;
 }
 
-button {
+.content-text {
+	display: flex;
+	justify-content: center;
+	padding: 1em;
+	color: white;
+	font-weight: bold;
+}
+
+.searchBtn {
 	background-color: #5934A5;
 	border: none;
 	color: #fff;
 }
+
+.header {
+
+	display: flow-root;
+}
+
+.header-logo {
+	float: left;
+}
+
+.header-logo svg{
+	max-height: 4em;
+}
+
+.header-bookmark {
+	float: right;
+}
+
