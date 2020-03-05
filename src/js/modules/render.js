@@ -1,17 +1,15 @@
 
 const main = document.querySelector('main');
 const nav = document.querySelectorAll('nav')[1];
+const loaderSvg = document.getElementById("loading_state");
 
 export function clearTag(tag){
     tag === 'nav' ? nav.textContent="" : main.textContent="";
 }
 
 // remove loader
-export function renderLoader() {
-
-  const loaderSvg = document.querySelector("#loading_state");
-  // loaderSvg.textContent = "";
-  loaderSvg.style.display = "none";
+export function renderLoader(state) {
+    //loaderSvg.style.display = state;
 }
 
 // export function render(data) {
@@ -35,12 +33,12 @@ export function renderLoader() {
 function addToFavs(item) {
   let bookmarks = [];
   bookmarks.push(item);
-  console.log(bookmarks);
 }
 
 export function renderImages(data) {
+
   const results = data.results;
-  console.dir(results);
+  console.log(results)
   results.forEach((item) => {
       const html = `
             <article>
@@ -67,7 +65,7 @@ export function renderImages(data) {
 export function renderNavButton(navValues){
     navValues.forEach(item => {
         const html = `
-        <button type="button" value="${item}">${item}</button>
+        <button class="searchBtn" type="button" value="${item}">${item}</button>
         `;
         nav.insertAdjacentHTML('beforeend', html);
     });

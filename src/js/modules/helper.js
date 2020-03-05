@@ -7,13 +7,14 @@ const ulCategoryList = document.querySelector("#themas");
 //search with button
 const categoryButton = document.querySelectorAll('nav')[1];
 
+let userCategoryChoice  = "";
+
 //search with searchbar
 document.getElementById('search').addEventListener("click",fetchParameter);
 
-function renderPage(data){
-    renderLoader('flex');
+function getPageData(data){
+    console.log(data);
     getData(search(data)).then( json => {
-        renderLoader('none');
         renderImages(json);
     });
 }
@@ -31,19 +32,19 @@ export const helper = {
         categoryButton.addEventListener("click", function (element) {
 
             // typeof element.target.value !== undefined ?
-            // renderPage(`${element.target.value}%20Dieren`): console.log("no value found for this click event!");
+            // getPageData(`${element.target.value}%20Dieren`): console.log("no value found for this click event!");
             if(element.target.tagName === ('BUTTON')){
                 categoryPH = element.target.value;
+
+                clearTag('main');
+                getPageData(`${userCategoryChoice}%20${categoryPH}`);
             }
-            clearTag('main');
-            renderPage(`Dieren%20${categoryPH}`);
         })
     },
 
     //Category buttons
     getCategoryChoice: function(){
         //A variable to store user input
-        let userCategoryChoice  = "";
 
         ulCategoryList.addEventListener("click", function (element) {
 
@@ -78,7 +79,7 @@ export const helper = {
 
                 //Empties screen from previous content
                 clearTag('main');
-                renderPage(userCategoryChoice);
+                getPageData(userCategoryChoice);
             }
         });
     }
@@ -88,5 +89,5 @@ export function fetchParameter() {
     let searchValue = document.getElementById('search-value').value;
 
     // clearTag('main');
-    renderPage(searchValue);
+    getPageData(searchValue);
 }

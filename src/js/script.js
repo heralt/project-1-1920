@@ -4,7 +4,4 @@ import {fetchParameter} from "./modules/helper.js";
 import {routing} from "./modules/router.js";
 import {helper} from "./modules/helper.js";
 
-helper.getCategoryChoice();
-helper.getButtonDieren();
-fetchParameter();
 routing();
