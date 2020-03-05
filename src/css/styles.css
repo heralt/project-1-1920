@@ -55,7 +55,7 @@ body > header {
 }
 
 header, nav {
-  /* margin: 1em 2em; */
+	/* margin: 1em 2em; */
 	padding: 1em 2em;
 }
 
@@ -72,15 +72,15 @@ svg {
 }
 
 @keyframes floatRobot {
-  0%   {
-    transform: translateY(0);
-  }
-  50%  {
-    transform: translateY(30%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0%   {
+		transform: translateY(0);
+	}
+	50%  {
+		transform: translateY(30%);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 /* ------------------- FLOAT ROBOT ------------------- */
@@ -93,14 +93,14 @@ svg {
 
 @keyframes blinkBulb {
 	0%   {
-    fill: #0080ff;
-  }
-  50%  {
-    fill: beige;
-  }
-  100% {
-    fill: #0080ff;
-  }
+		fill: #0080ff;
+	}
+	50%  {
+		fill: beige;
+	}
+	100% {
+		fill: #0080ff;
+	}
 }
 
 /* ------------------- BLINK LIGHTBULB ------------------- */
@@ -114,15 +114,15 @@ svg {
 
 @keyframes winkEye {
 	0%   {
-    fill: #0080ff;
+		fill: #0080ff;
 		/* fill: beige; */
-  }
-  50%  {
-    fill: beige;
-  }
-  100% {
-    fill: #0080ff;
-  }
+	}
+	50%  {
+		fill: beige;
+	}
+	100% {
+		fill: #0080ff;
+	}
 }
 
 /* ------------------- WINK EYE 2 ------------------- */
@@ -136,43 +136,43 @@ svg {
 
 @keyframes winkEye {
 	0%   {
-    fill: #0080ff;
+		fill: #0080ff;
 		/* fill: beige; */
-  }
-  50%  {
-    fill: beige;
-  }
-  100% {
-    fill: #0080ff;
-  }
+	}
+	50%  {
+		fill: beige;
+	}
+	100% {
+		fill: #0080ff;
+	}
 }
 
 /* ------------------- WINK EYE ------------------- */
 
 h1 {
-  color: #0080ff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
+	color: #0080ff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
 }
 
 ul {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 #themas > li {
-    flex: 1;
-    color: #fff;
-    background-color: #FECC4F;
-    list-style-type: none;
-    margin: 2em 1em;
-    min-height: 10em;
-    max-width: 15em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-		border-radius: 0.25em;
+	flex: 1;
+	color: #fff;
+	background-color: #FECC4F;
+	list-style-type: none;
+	margin: 2em 1em;
+	min-height: 10em;
+	max-width: 15em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.25em;
 }
 
 #themas > li:hover {
@@ -181,12 +181,12 @@ ul {
 }
 
 #themas > li > a {
-  color: #fff;
-  text-decoration: none;
-  /* padding: 2em; */
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	/* padding: 2em; */
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
 	text-transform: capitalize;
 }
 
@@ -244,7 +244,7 @@ main > article:hover {
 }
 
 .article-header {
-    display: flex;
+	display: flex;
 	justify-content: center;
 	background-color: #FECC4F;
 	border-radius: 9px 9px 0px 0px;
@@ -262,7 +262,7 @@ main > article:hover {
 }
 
 main article:hover .article-header{
-    visibility: visible;
+	visibility: visible;
 }
 
 main article img {
@@ -290,17 +290,19 @@ main article img {
 }
 
 .header {
+
 	display: flow-root;
 }
 
 .header-logo {
-    float: left;
+	float: left;
 }
 
 .header-logo svg{
-    max-height: 4em;
+	max-height: 4em;
 }
 
 .header-bookmark {
-    float: right;
+	float: right;
 }
+
