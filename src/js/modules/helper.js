@@ -1,5 +1,5 @@
 import {getData, search} from "./api.js";
-import {renderImages,renderNavButton,clearTag,renderLoader} from "./render.js";
+import {renderOverview, renderDetail, renderNavButton, clearTag} from "./render.js";
 
 // The list with category themes
 const ulCategoryList = document.querySelector("#themas");
@@ -9,22 +9,35 @@ const categoryButton = document.querySelectorAll('nav')[1];
 
 let userCategoryChoice  = "";
 
-//search with searchbar
-document.getElementById('search').addEventListener("click",fetchParameter);
-
-function getPageData(data){
-    console.log(data);
-    getData(search(data)).then( json => {
-        renderImages(json);
-    });
-}
-
 export const helper = {
 
     /*getSearchResult: function () {
         let searchValue = "";
-
     },*/
+
+    getDetailData: function(data){
+        console.log("DetailData: ", data);
+        var rawData = search('/details/?id=', data);
+        var cleanUrl = rawData.replace(/undefined/g,'');
+
+        getData(cleanUrl).then( json => {
+            renderDetail(json);
+        });
+    },
+
+    getOverviewData: function(data){
+        console.log("OverviewData: ", data);
+        getData(search('/search/?q=', data, '&pagesize=20', '&page=1', '&refine=true')).then( json => {
+            renderOverview(json);
+        });
+    },
+
+    fetchParameter: function() {
+        let searchValue = document.getElementById('search-value').value;
+    
+        // clearTag('main');
+        this.getOverviewData(searchValue);
+    },
 
     getButtonDieren: function(){
         let categoryPH = "";
@@ -37,7 +50,7 @@ export const helper = {
                 categoryPH = element.target.value;
 
                 clearTag('main');
-                getPageData(`${userCategoryChoice}%20${categoryPH}`);
+                getOverviewData(`${userCategoryChoice}%20${categoryPH}`);
             }
         })
     },
@@ -79,15 +92,13 @@ export const helper = {
 
                 //Empties screen from previous content
                 clearTag('main');
-                getPageData(userCategoryChoice);
+                getOverviewData(userCategoryChoice);
             }
         });
     }
 };
 
-export function fetchParameter() {
-    let searchValue = document.getElementById('search-value').value;
+//search with searchbar
+document.getElementById('search').addEventListener("click", helper.fetchParameter);
 
-    // clearTag('main');
-    getPageData(searchValue);
-}
+
