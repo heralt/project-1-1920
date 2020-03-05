@@ -2,7 +2,7 @@ export function search(parameter) {
     const cors = 'https://cors-anywhere.herokuapp.com/';
     const baseUrl = 'https://zoeken.oba.nl/api/v1';
     const endPoint = '/search/?q=';
-    const key = '03b058d877ec4276bb63dd1c6e1f3768';
+    const key = '17a9c4d4d56a41b55abc2d3096e94be4';
     const detail = 'Default';
     const pageSize = '&pagesize=10';
     let page = '&page=1';
@@ -37,9 +37,9 @@ export function getData(url) {
 
 // function fetchCall(url) {
 //   // public="166270b1475823ac569dab2a55e8aa3a" secret="484253216f9014c8e418f243f9dafc63" description="OBA_api_1"
-//   // const secret = '484253216f9014c8e418f243f9dafc63';    
+//   // const secret = '484253216f9014c8e418f243f9dafc63';
 //   // const config = {
-//   //     headers: { 
+//   //     headers: {
 //   //         Authorization: `Bearer ${secret}`,
 //   //     },
 //   //     // mode: 'no-cors'
@@ -65,7 +65,7 @@ export function getData(url) {
 // export function API(url){
 //   return {
 //     url: url,
-//     fetchCall: () => fetchCall(url, {}) 
+//     fetchCall: () => fetchCall(url, {})
 //   };
 // }
 
@@ -111,7 +111,7 @@ export function getData(url) {
 //           false: 'false',
 //       },
 //       detaillevelIndex: '&detaillevel=',
-//       detaillevelValue: { 
+//       detaillevelValue: {
 //           Default: 'Default', // Mirrors site output
 //           Minimum: 'Minimum', // Only title, author, cover, id
 //           Basic: 'Basic', // Only very basic output, all that is needed for displaying result, nothing more (best perfomance)

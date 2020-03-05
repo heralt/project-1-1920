@@ -59,14 +59,16 @@ header, nav {
 	padding: 1em 2em;
 }
 
-header > svg {
+svg {
 	height: 5em;
 }
 
 /* ------------------- FLOAT ROBOT ------------------- */
 
-svg {
-	animation: floatRobot 2s ease-in-out infinite;
+#loading_state {
+	display: flex;
+	justify-content: center;
+	animation: floatRobot 1s ease-in-out infinite;
 }
 
 @keyframes floatRobot {
@@ -85,7 +87,7 @@ svg {
 
 /* ------------------- BLINK LIGHTBULB ------------------- */
 
-.blink_toggle {
+.blink_toggle2 {
 	animation: blinkBulb 2s ease-in-out infinite;
 }
 
@@ -102,6 +104,28 @@ svg {
 }
 
 /* ------------------- BLINK LIGHTBULB ------------------- */
+
+/* ------------------- WINK EYE 2 ------------------- */
+
+#right_eye2 {
+	/* fill: #0080ff; */
+	animation: winkEye 2s ease-in-out infinite;
+}
+
+@keyframes winkEye {
+	0%   {
+    fill: #0080ff;
+		/* fill: beige; */
+  }
+  50%  {
+    fill: beige;
+  }
+  100% {
+    fill: #0080ff;
+  }
+}
+
+/* ------------------- WINK EYE 2 ------------------- */
 
 /* ------------------- WINK EYE ------------------- */
 
@@ -149,6 +173,11 @@ ul {
     justify-content: center;
     align-items: center;
 		border-radius: 0.25em;
+}
+
+#themas > li:hover {
+	background-color: rebeccapurple;
+	cursor: pointer;
 }
 
 #themas > li > a {

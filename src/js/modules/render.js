@@ -6,6 +6,14 @@ export function clearTag(tag){
     tag === 'nav' ? nav.textContent="" : main.textContent="";
 }
 
+// remove loader
+export function renderLoader() {
+
+  const loaderSvg = document.querySelector("#loading_state");
+  // loaderSvg.textContent = "";
+  loaderSvg.style.display = "none";
+}
+
 // export function render(data) {
 //   const results = data.results;
 //   console.dir(results);

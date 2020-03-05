@@ -1,5 +1,5 @@
 import {getData, search} from "./api.js";
-import {renderImages,renderNavButton,clearTag} from "./render.js";
+import {renderImages,renderNavButton,clearTag,renderLoader} from "./render.js";
 
 // The list with category themes
 const ulCategoryList = document.querySelector("#themas");
@@ -10,12 +10,14 @@ document.getElementById('search').addEventListener("click",fetchParameter);
 export function fetchParameter() {
   let searchValue = document.getElementById('search-value').value;
 
-  clearTag('main');
+  // clearTag('main');
+  // setTimeout(function(){ renderLoader(); }, 5000);
   renderPage(searchValue);
 }
 
 function renderPage(data){
     getData(search(data)).then( json => {
+        renderLoader();
         renderImages(json);
     });
 }
