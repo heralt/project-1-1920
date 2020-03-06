@@ -50,7 +50,7 @@
     </div>
 
     <div class="header-bookmark">
-      <button id="bookmarked" class="bookmarkBtn material-icons" type="submit" name="bookMarks">bookmarks</button>
+      <a href="#notes"><button id="bookmarked" class="bookmarkBtn material-icons" type="submit" name="bookMarks">bookmarks</button></a>
     </div>
   </header>
 
@@ -66,10 +66,18 @@
   <nav></nav>
 
   <form action="#">
-
     <input id="search-value" type="text" name="" value="" onfocus="this.placeholder=''"  placeholder="Ik weet al welke onderwerp ik wil zoeken">
     <button id="search" class="searchBtn" type="submit" name="zoeken">Vinden</button>
   </form>
+
+  <script>
+    function addToFavs(item) {
+      console.log("item", item);
+      let favs = [];
+      favs.push(item);
+      bookmark.getUpdatedList(favs);
+    }
+  </script>
 
   <main>
       <div id="loading_state">
@@ -106,9 +114,11 @@
       </div>
     </main>
     <section id="detail">
-
+    </section>
+    <section id="notes">
     </section>
 
+    <script type="module" src="src/js/modules/bookmark.js"></script>
   <script type="module" src="src/js/script.js"></script>
   <script src="src/libraries/routie.js"></script>
 </body>
