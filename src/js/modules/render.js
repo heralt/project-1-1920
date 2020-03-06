@@ -1,6 +1,7 @@
 
 const main = document.querySelector('main');
 const detailSection = document.querySelector('#detail');
+const noteSection = document.querySelector('#notes');
 const nav = document.querySelectorAll('nav')[1];
 const notes = document.getElementById('notes');
 
@@ -39,6 +40,7 @@ export function renderDetail(data) {
 }
 
 export function renderNotes() {
+    //noteSection.style.display = "block";
     const html = `
     <nav class="boek-info">
     <img src="https://v111.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/180056565&token=c1322402" alt="boek afbeelding">
@@ -48,10 +50,7 @@ export function renderNotes() {
       </div>
       <div class="samenvatting">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Bloemlezing van gedichten van Nederlandstalige dichters over vaders, moeders, dochters en zoons.
         </p>
       </div>
     </div>
@@ -59,6 +58,11 @@ export function renderNotes() {
       <div id="kladblok">
         <h2 class="subtitel">Notitie</h2>
         <p contenteditable="true">Schrijf hier informatie over het boek.</p>
+      </div>
+
+      <div class="saveBox">
+        <button id="wipe" class="wipeBtn" type="submit" name="wis">Wis</button>
+        <button id="save" class="saveBtn" type="submit" name="opslaan">Opslaan</button>
       </div>
     </main>
   </nav>
@@ -68,6 +72,7 @@ export function renderNotes() {
 
 export function renderOverview(data) {
   const results = data.results;
+    //noteSection.style.display = "none";
   console.log("renderOverviewData: ", data);
   clearTag('main');
   clearTag('detail');
@@ -89,7 +94,7 @@ export function renderOverview(data) {
     </a>
     </div>
     <div class="content-text">
-    <p>Titel :  ${item.titles[0]}</p>
+    <p>${item.titles[0]}</p>
     </div>
     </div>
     </article>

@@ -277,6 +277,37 @@ main {
 	padding: 4em 2em;
 }
 
+.boek-info > main{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 4em 2em;
+		background-color: #0080ff;
+		width: 25em;
+}
+
+.wipeBtn {
+	background-color: #5934A5;
+	border: none;
+	color:#fff;
+	font-size: 1em;
+	width: 10em;
+	padding: 1em;
+}
+
+.saveBtn {
+	background-color: #5934A5;
+	border: none;
+	color: #fff;
+	font-size: 1em;
+	width: 10em;
+	padding: 1em;
+}
+
+.wipeBtn:hover, .saveBtn:hover {
+	cursor: pointer;
+}
+
 main > article {
 	cursor: pointer;
 	min-width: 15em;
@@ -422,9 +453,10 @@ main article img {
 
 #kladblok p {
 	border-top: 1px solid black;
-	/* background-color: lightblue; */
-	height: 600px;
+	/* height: 600px; */
+	height: 37.5em;
 	padding: 0.5em;
+	line-height: 1.4em;
 }
 
 #kladblok h2 {

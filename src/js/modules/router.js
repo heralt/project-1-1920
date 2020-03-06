@@ -1,5 +1,7 @@
 import {helper} from "./helper.js";
-import {renderNotes} from "./render.js";
+import {renderNotes,clearTag} from "./render.js";
+
+const main = document.querySelector('main');
 
 export function routing() {
 
@@ -17,6 +19,8 @@ export function routing() {
             helper.getDetailData(id);
         },
         'notes': () => {
+            clearTag('main');
+            main.style.display = 'none';
             renderNotes();
         }
     });
