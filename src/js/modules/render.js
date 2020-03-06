@@ -79,12 +79,12 @@ export function renderOverview(data) {
   main.style.display = 'flex';
   detailSection.style.display = 'none';
   results.forEach((item) => {
+    var itemId = item.id.replace("|oba-catalogus|",'');
     const html = `
     <article>
-    <div class="article-header">
-      <label for="cb">
-      Markeer uw favoriet
-          <input name="cb" id="cb" type="checkbox" onclick="addToFavs(${item.id.replace("|oba-catalogus|",'')})">
+    <div class="article-header" data-id="${itemId}" onclick="addToFavs(${itemId});">
+      <label>
+          Markeer uw favoriet
       </label>
     </div>
     <div class="article-content">

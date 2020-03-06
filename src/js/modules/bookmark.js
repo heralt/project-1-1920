@@ -1,5 +1,4 @@
-const bookmark = {
-    getUpdatedList: function (bookmarkList) {
-        
+
+    var getUpdatedList = function (bookmarkList) {
+        console.log("gelukt!")
     }
-}
