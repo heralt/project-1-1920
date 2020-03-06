@@ -1,12 +1,11 @@
 import {helper} from "./helper.js";
-import {renderNotes,clearTag} from "./render.js";
 
 const main = document.querySelector('main');
 
 export function routing() {
 
     //if bookmark is pressed display popup
-    helper.getBookmarked();
+    // helper.getBookmarked();
     //helper.renderLoader('block');
 
     routie({
@@ -18,10 +17,10 @@ export function routing() {
         'detail/:id': id => {
             helper.getDetailData(id);
         },
-        'notes': () => {
+        /*'notes': () => {
             clearTag('main');
             main.style.display = 'none';
             renderNotes();
-        }
+        }*/
     });
 }

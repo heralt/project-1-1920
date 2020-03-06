@@ -11,7 +11,7 @@ export function clearTag(tag) {
   :detailSection.textContent = "";
 }
 
-export function renderDetail(data) {
+/*export function renderDetail(data) {
     clearTag('detail');
     clearTag('main');
     const result = data.record;
@@ -37,20 +37,25 @@ export function renderDetail(data) {
   </article>
   `;
   detailSection.insertAdjacentHTML('beforeend', html);
-}
+}*/
 
-export function renderNotes() {
-    //noteSection.style.display = "block";
+export function renderDetail(data) {
+    clearTag('detail');
+    clearTag('main');
+    const result = data.record;
+    main.style.display = 'none';
+    detailSection.style.display = 'flex';
+
     const html = `
     <nav class="boek-info">
-    <img src="https://v111.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/180056565&token=c1322402" alt="boek afbeelding">
+    <img src="${result.coverimages[0] ? result.coverimages[1] : 'Geen samenvatting'}">
     <div class="omschrijving_containter">
       <div class="titel">
-        <p>Familie duurt een mensenleven lang : de honderd mooiste Nederlandse gedichten over vaders, moeders, dochters en zonen</p>
+        <p>${result.titles[0]}</p>
       </div>
       <div class="samenvatting">
         <p>
-          Bloemlezing van gedichten van Nederlandstalige dichters over vaders, moeders, dochters en zoons.
+          ${typeof result.summaries == "undefined" ? 'N.V.T' : result.summaries[0]}
         </p>
       </div>
     </div>
@@ -67,7 +72,7 @@ export function renderNotes() {
     </main>
   </nav>
     `;
-    notes.insertAdjacentHTML('beforeend',html);
+    detailSection.insertAdjacentHTML('beforeend',html);
 }
 
 export function renderOverview(data) {

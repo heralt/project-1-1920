@@ -102,13 +102,13 @@ export const helper = {
         });
     },
 
-    getBookmarked: function(){
+    /*getBookmarked: function(){
         bookmarkButton.addEventListener("click", function() {
-            /*alert(
+            alert(
                 "Bookmarked books:"
-            );*/
+            );
         })
-    },
+    },*/
     renderLoader: function(state) {
         loaderSvg.style.display = state;
     },
