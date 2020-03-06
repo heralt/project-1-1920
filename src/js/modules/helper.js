@@ -10,6 +10,9 @@ const categoryButton = document.querySelectorAll('nav')[1];
 //bookmark button
 const bookmarkButton = document.getElementById('bookmarked');
 
+//search with searchbar
+const searchButton = document.getElementById('search');
+
 let userCategoryChoice  = "";
 
 export const helper = {
@@ -37,9 +40,8 @@ export const helper = {
 
     fetchParameter: function() {
         let searchValue = document.getElementById('search-value').value;
-
-        // clearTag('main');
-        this.getOverviewData(searchValue);
+        console.log(searchValue);
+        helper.getOverviewData(searchValue);
     },
 
     getButtonDieren: function(){
@@ -102,14 +104,15 @@ export const helper = {
 
     getBookmarked: function(){
         bookmarkButton.addEventListener("click", function() {
-            alert(
+            /*alert(
                 "Bookmarked books:"
-            );
+            );*/
         })
-    }
+    },
+    renderLoader: function(state) {
+        loaderSvg.style.display = state;
+    },
 };
 
-//search with searchbar
-document.getElementById('search').addEventListener("click", helper.fetchParameter);
-
+searchButton.addEventListener("click", helper.fetchParameter);
 
