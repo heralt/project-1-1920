@@ -75,17 +75,17 @@ Link to the site: [link](https://heralt.github.io/project-1-1920/)
 
 ## Authors 
 * **Jaouad Kaouch** 
-* **Randy** 
+* **Randy Dalgliesh** 
 * **Heralt Levant**
 ## Features
 Search for books that you want to use in your paper and bookmark these books. Bookmarked books are shown in bookmarked 
 section with the summary and you're able to start your paper in the bookmark section. 
 ## API
-The API that we used for this project is the OBA API. This API contains data about the books that you're able to borrow 
+The [API](https://zoeken.oba.nl/api/v1/) that we used for this project is the OBA API. This API contains data about the books that you're able to borrow 
 from the OBA.
 ## Built with
 - Routie.\
-No frameworks are used for this project.
+- No frameworks are used for this project.
 ## Todo
 - [x] Specific filtering of books
 - [x] Bookmark/Notes page
