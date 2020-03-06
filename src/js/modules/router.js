@@ -1,6 +1,10 @@
 import {helper} from "./helper.js";
 
 export function routing() {
+
+    //if bookmark is pressed display popup
+    helper.getBookmarked();
+
     routie({
         '': () => {
             helper.getCategoryChoice();

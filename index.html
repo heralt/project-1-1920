@@ -50,7 +50,7 @@
     </div>
 
     <div class="header-bookmark">
-      <button id="search" class="bookmarkBtn material-icons" type="submit" name="bookMarks">bookmarks</button>
+      <button id="bookmarked" class="bookmarkBtn material-icons" type="submit" name="bookMarks">bookmarks</button>
     </div>
   </header>
 
@@ -67,7 +67,7 @@
 
   <form action="#">
 
-    <input id="search-value" type="text" name="" value="" placeholder="Ik weet al welke onderwerp ik wil zoeken">
+    <input id="search-value" type="text" name="" value="" onfocus="this.placeholder=''"  placeholder="Ik weet al welke onderwerp ik wil zoeken">
     <button id="search" class="searchBtn" type="submit" name="zoeken">Vinden</button>
   </form>
 
@@ -115,7 +115,7 @@
       </div>
     </main>
     <section id="detail">
-      
+
     </section>
 
     <script type="module" src="src/js/bookmark.js"></script>

@@ -125,10 +125,6 @@ svg {
 	}
 }
 
-/* ------------------- WINK EYE 2 ------------------- */
-
-/* ------------------- WINK EYE ------------------- */
-
 #right_eye {
 	/* fill: #0080ff; */
 	animation: winkEye 2s ease-in-out infinite;
@@ -175,6 +171,58 @@ ul {
 	border-radius: 0.25em;
 }
 
+#themas > li:nth-child(1) {
+	background-color: #1B8BC3;
+}
+
+#themas > li:nth-child(2) {
+	background-color: #F86924;
+}
+
+#themas > li:nth-child(3) {
+	background-color: #35BC7A;
+}
+
+#themas > li:nth-child(4) {
+	background-color: #F85045;
+}
+
+/* ------------------- WINK EYE ------------------- */
+
+	#themas > li:nth-child(1):hover {
+		box-sizing: border-box;
+		background-color: #1B8BC3;
+		border-style: none none solid none;
+		border-width: 0.5em;
+		border-color:#085f8a;
+	}
+
+	#themas > li:nth-child(2):hover {
+		box-sizing: border-box;
+		background-color: #F86924;
+		border-style: none none solid none;
+		border-width: 0.5em;
+		border-color:#bb460e;
+	}
+
+	#themas > li:nth-child(3):hover {
+		background-color: #35BC7A;
+		box-sizing: border-box;
+		border-style: none none solid none;
+		border-width: 0.5em;
+		border-color:#07914d;
+	}
+
+	#themas > li:nth-child(4):hover {
+		background-color: #F85045;
+		box-sizing: border-box;
+		border-style: none none solid none;
+		border-width: 0.5em;
+		border-color:#bd251b;;
+}
+
+/* ------------------- WINK EYE ------------------- */
+
 #themas > li:hover {
 	background-color: rebeccapurple;
 	cursor: pointer;
@@ -186,6 +234,7 @@ ul {
 	/* padding: 2em; */
 	/* font-family: 'Montserrat', sans-serif; */
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5em;
 	font-weight: 700;
 	text-transform: capitalize;
 }
@@ -311,6 +360,10 @@ main article img {
 	color: #fff;
 }
 
+.searchBtn:hover {
+	background-color: #6A43B9;
+}
+
 .header {
 
 	display: flow-root;
@@ -331,4 +384,3 @@ main article img {
 #detail {
 	display: none;
 }
-
