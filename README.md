@@ -5,7 +5,7 @@ Het project vindt plaats bij de Centrale OBA. Maandagochtend is om 10.30 uur de 
 ## Instructie voor het gebruiken van de API
 
  [http://zoeken.oba.nl/api/v1](http://zoeken.oba.nl/api/v1)
- 
+
  Zie voorbeeld code in deze repository voor het aanspreken van de API.
 
 ## Programma
@@ -32,7 +32,7 @@ In het vak [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from
 In het vak [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) heb je geleerd over de (brede) scope van CSS, over Progressive Enhancement, de _cascase_, _inheritance_ en _specifity_. Het is belangrijk om deze basisprincipes van CSS goed te begrijpen. Niet alleen op praktisch niveau, ook op experimenteel niveau. Zonder goed begrip van de basisprincipes is CSS magisch en weird. Met een goed begrip heb je CSS onder controle en kan je het laten doen wat jij wil. En dat is nodig om webpagina’s vorm te geven met attention to detail; webpagina’s waar mensen blij van worden.
 
 ### Oplevering & criteria
-- Presentatie met je bevindingen bij de OBA. 
+- Presentatie met je bevindingen bij de OBA.
 - Github met je code en readme.
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
@@ -55,9 +55,9 @@ In het vak [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-resc
 # LibraryNotes
 
 ### Description
-This webapp should make it easier for kids to find subjects they're interested in for the papers they need 
-to write. This means filtering on specific subjects, and being able to see a short description of the books they find. 
-If a good book is found, bookmark this book and write short notes about the books that they find. 
+This webapp should make it easier for kids to find subjects they're interested in for the papers they need
+to write. This means filtering on specific subjects, and being able to see a short description of the books they find.
+If a good book is found, bookmark this book and write short notes about the books that they find.
 
 ## table of contents
 - [Live demo](#Live-Demo)
@@ -73,22 +73,22 @@ Link to the site: [link](https://heralt.github.io/project-1-1920/)
 
 ![Image of Yaktocat](images/image.png)
 
-## Authors 
-* **Jaouad Kaouch** 
-* **Randy** 
+## Authors
+* **Jaouad Kaouch**
+* **Randy Dalgliesh**
 * **Heralt Levant**
 ## Features
-Search for books that you want to use in your paper and bookmark these books. Bookmarked books are shown in bookmarked 
-section with the summary and you're able to start your paper in the bookmark section. 
+Search for books that you want to use in your paper and bookmark these books. Bookmarked books are shown in bookmarked
+section with the summary and you're able to start your paper in the bookmark section.
 ## API
-The API that we used for this project is the OBA API. This API contains data about the books that you're able to borrow 
+The [API](https://zoeken.oba.nl/api/v1/) that we used for this project is the OBA API. This API contains data about the books that you're able to borrow
 from the OBA.
 ## Built with
 - Routie.\
-No frameworks are used for this project.
+- No frameworks are used for this project.
 ## Todo
 - [x] Specific filtering of books
 - [x] Bookmark/Notes page
 ## Wishlist
 - [ ] show bookmarked books bookmark section
-- [ ] improve detailpage styling 
+- [ ] improve detailpage styling
