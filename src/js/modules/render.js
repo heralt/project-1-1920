@@ -1,12 +1,11 @@
-
 const main = document.querySelector('main');
 const detailSection = document.querySelector('#detail');
 const nav = document.querySelectorAll('nav')[1];
 
 export function clearTag(tag) {
-    return tag === 'nav' ? nav.textContent = ""
-         :tag === 'main' ? main.textContent = ""
-         :detailSection.textContent = "";
+  return tag === 'nav' ? nav.textContent = ""
+  :tag === 'main' ? main.textContent = ""
+  :detailSection.textContent = "";
 }
 
 // remove loader
@@ -15,16 +14,16 @@ export function clearTag(tag) {
 // }
 
 export function renderDetail(data) {
-    clearTag('detail');
+  clearTag('detail');
   console.log("renderDetailData: ", data);
   const result = data.record;
   main.style.display = 'none';
   detailSection.style.display = 'flex';
-
+  
   const html = `
   <article>
   <div class="article-header">
-  <h2>${result.titles[0]}</h2>
+  <h1>${result.titles[0]}</h1>
   </div>
   <div class="article-content">
   <div class="content-image">
@@ -42,13 +41,6 @@ export function renderDetail(data) {
   detailSection.insertAdjacentHTML('beforeend', html);
 };
 
-
-
-function addToFavs(item) {
-  let bookmarks = [];
-  bookmarks.push(item);
-}
-
 export function renderOverview(data) {
   const results = data.results;
   console.log("renderOverviewData: ", data);
@@ -57,19 +49,21 @@ export function renderOverview(data) {
   results.forEach((item) => {
     const html = `
     <article>
-        <div class="article-header">
-            <input type="checkbox" id="${item.id}">
-            <label for="${item.id}">Markeer uw favoriet</label>
-        </div>
-        <div class="article-content">
-            <div class="content-image">
-                <a href="#detail/${item.id}">
-                <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
-                </a>
-            </div>
-        <div class="content-text">
-            <p>Titel :  ${item.titles[0]}</p>
-        </div>
+    <div class="article-header">
+      <label for="cb">
+      Markeer uw favoriet
+          <input name="cb" id="cb" type="checkbox" onclick="addToFavs(${item.id.replace("|oba-catalogus|",'')})">
+      </label>
+    </div>
+    <div class="article-content">
+    <div class="content-image">
+    <a href="#detail/${item.id}">
+    <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
+    </a>
+    </div>
+    <div class="content-text">
+    <p>Titel :  ${item.titles[0]}</p>
+    </div>
     </div>
     </article>
     `;

@@ -71,6 +71,15 @@
     <button id="search" class="searchBtn" type="submit" name="zoeken">Vinden</button>
   </form>
 
+  <script>
+    function addToFavs(item) {
+      console.log("item", item);
+      let favs = [];
+      favs.push(item);
+      bookmark.getUpdatedList(favs);
+    }
+  </script>
+
   <main>
       <div id="loading_state">
         <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 86.9 95" enable-background="new 0 0 86.9 95" xml:space="preserve">
@@ -109,6 +118,7 @@
       
     </section>
 
+    <script type="module" src="src/js/bookmark.js"></script>
   <script type="module" src="src/js/script.js"></script>
   <script src="src/libraries/routie.js"></script>
 </body>

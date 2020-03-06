@@ -275,7 +275,7 @@ main .article-header {
 
 .article-header input {
 	cursor: pointer;
-	visibility: hidden;
+	/* visibility: hidden; */
 }
 
 .article-header label {
