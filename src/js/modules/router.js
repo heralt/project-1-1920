@@ -1,9 +1,11 @@
 import {helper} from "./helper.js";
+import {renderNotes} from "./render.js";
 
 export function routing() {
 
     //if bookmark is pressed display popup
     helper.getBookmarked();
+    //helper.renderLoader('block');
 
     routie({
         '': () => {
@@ -14,5 +16,8 @@ export function routing() {
         'detail/:id': id => {
             helper.getDetailData(id);
         },
+        'notes': () => {
+            renderNotes();
+        }
     });
 }
