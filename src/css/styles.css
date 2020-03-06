@@ -358,6 +358,8 @@ main article img {
 	background-color: #5934A5;
 	border: none;
 	color: #fff;
+	padding: 1.1em 2em;
+	/* border: 1px solid #d8127d; */
 }
 
 .searchBtn:hover {
@@ -373,6 +375,11 @@ main article img {
 	float: left;
 }
 
+.header-logo > a {
+	text-decoration: none;
+}
+
+
 .header-logo svg{
 	max-height: 4em;
 }
@@ -383,4 +390,5 @@ main article img {
 
 #detail {
 	display: none;
+	justify-content: center;
 }
